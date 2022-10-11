@@ -2,7 +2,7 @@ version: "3"
 
 services:
   idref-api-derivationBnf:
-    image: abesesr/idref:microservices-derivation-bnf
+    image: abesesr/idref:develop-derivation-bnf
     container_name: idref-api-derivationBnf
     restart: unless-stopped
     environment:
@@ -19,7 +19,7 @@ services:
       - "com.centurylinklabs.watchtower.scope=idref-api-watchtower-scope"
 
   idref-api-derivationViaf:
-    image: abesesr/idref:microservices-derivation-viaf
+    image: abesesr/idref:develop-derivation-viaf
     container_name: idref-api-derivationViaf
     restart: unless-stopped
     environment:
