@@ -13,6 +13,8 @@ services:
       # pour envoyer les logs dans le puits de log de l'abes
       - "co.elastic.logs/enabled=true"
       - "co.elastic.logs/processors.add_fields.target="
+      - "co.elastic.logs/fileset.stdout=access"
+      - "co.elastic.logs/fileset.stderr=error"      
       - "co.elastic.logs/processors.add_fields.fields.abes_appli=idref-api-derivationBnf"
       # pour que les mises à jour de cette image soient auto-déployées
       # par watchtower cf docker-compose.watchtower.yml
@@ -30,6 +32,8 @@ services:
       # pour envoyer les logs dans le puits de log de l'abes
       - "co.elastic.logs/enabled=true"
       - "co.elastic.logs/processors.add_fields.target="
+      - "co.elastic.logs/fileset.stdout=access"
+      - "co.elastic.logs/fileset.stderr=error"      
       - "co.elastic.logs/processors.add_fields.fields.abes_appli=idref-api-derivationViaf"
       # pour que les mises à jour de cette image soient auto-déployées
       # par watchtower cf docker-compose.watchtower.yml
