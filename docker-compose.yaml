@@ -6,6 +6,8 @@ services:
     container_name: idref-api-derivationBnf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
+    memswap_limit: ${MEM_LIMIT}
+    cpus: ${CPU_LIMIT}
     environment:
       - ENVIR=${ENVIR}
     ports:
@@ -26,6 +28,8 @@ services:
     container_name: idref-api-derivationViaf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
+    memswap_limit: ${MEM_LIMIT}
+    cpus: ${CPU_LIMIT}
     environment:
       - ENVIR=${ENVIR}
     ports:
@@ -53,6 +57,8 @@ services:
     container_name: idref-api-watchtower
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
+    memswap_limit: ${MEM_LIMIT}
+    cpus: ${CPU_LIMIT}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
