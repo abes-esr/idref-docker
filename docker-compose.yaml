@@ -2,7 +2,7 @@ version: "3"
 
 services:
   idref-api-derivationBnf:
-    image: abesesr/idref:{IDREF_VERSION}-derivation-bnf
+    image: abesesr/idref:${IDREF_VERSION}-derivation-bnf
     container_name: idref-api-derivationBnf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
@@ -24,7 +24,7 @@ services:
       - "com.centurylinklabs.watchtower.scope=idref-api-watchtower-scope"
 
   idref-api-derivationViaf:
-    image: abesesr/idref:{IDREF_VERSION}-derivation-viaf
+    image: abesesr/idref:${IDREF_VERSION}-derivation-viaf
     container_name: idref-api-derivationViaf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
