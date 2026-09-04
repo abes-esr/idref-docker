@@ -1,2 +1,19 @@
-.env
 volumes
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*.local
