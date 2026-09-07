@@ -44,3 +44,26 @@ services:
       # pour que les mises à jour de cette image soient auto-déployées par WUD
       - "wud.watch=true"
       - "wud.watch.digest=true"
+
+  data-idref:
+    image: abesesr/idref:${DATAIDREF_VERSION}-data-idref
+    container_name: data-idref
+    restart: unless-stopped
+    mem_limit: ${MEM_LIMIT}
+    memswap_limit: ${MEM_LIMIT}
+    cpus: ${CPU_LIMIT}
+    ports:
+      - ${DATAIDREF_HTTP_PORT:-6085}:80
+    environment:
+      VIRTUOSO_URL: ${DATAIDREF_VIRTUOSO_URL} http://tulipe2-dev.v212.abes.fr:8890
+      SPARQL_PUBLIC_ENDPOINT: ${DATAIDREF_SPARQL_PUBLIC_ENDPOINT}  https://data-dev.idref.fr/sparql
+    labels:
+      # pour envoyer les logs dans le puits de log de l'abes
+      - "co.elastic.logs/enabled=true"
+      - "co.elastic.logs/processors.add_fields.target="
+      - "co.elastic.logs/fileset.stdout=access"
+      - "co.elastic.logs/fileset.stderr=error"
+      - "co.elastic.logs/processors.add_fields.fields.abes_appli=data-idref"
+      # pour que les mises à jour de cette image soient auto-déployées par WUD
+      - "wud.watch=true"
+      - "wud.watch.digest=true"
