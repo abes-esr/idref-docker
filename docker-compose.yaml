@@ -1,4 +1,3 @@
-version: "3"
 
 services:
   idref-api-derivationBnf:
@@ -55,8 +54,8 @@ services:
     ports:
       - ${DATAIDREF_HTTP_PORT:-6085}:80
     environment:
-      VIRTUOSO_URL: ${DATAIDREF_VIRTUOSO_URL} http://tulipe2-dev.v212.abes.fr:8890
-      SPARQL_PUBLIC_ENDPOINT: ${DATAIDREF_SPARQL_PUBLIC_ENDPOINT}  https://data-dev.idref.fr/sparql
+      VIRTUOSO_URL: ${DATAIDREF_VIRTUOSO_URL}
+      SPARQL_PUBLIC_ENDPOINT: ${DATAIDREF_SPARQL_PUBLIC_ENDPOINT}
     labels:
       # pour envoyer les logs dans le puits de log de l'abes
       - "co.elastic.logs/enabled=true"
