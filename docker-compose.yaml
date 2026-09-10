@@ -10,7 +10,7 @@ services:
     environment:
       - ENVIR=${ENVIR}
     ports:
-      - ${DERIVATION_BNF_HTTP_PORT:-6085}:8080
+      - ${DERIVATION_BNF_HTTP_PORT}:8080
     labels:
       # pour envoyer les logs dans le puits de log de l'abes
       - "co.elastic.logs/enabled=true"
@@ -32,7 +32,7 @@ services:
     environment:
       - ENVIR=${ENVIR}
     ports:
-      - ${DERIVATION_VIAF_HTTP_PORT:-6085}:8080
+      - ${DERIVATION_VIAF_HTTP_PORT}:8080
     labels:
       # pour envoyer les logs dans le puits de log de l'abes
       - "co.elastic.logs/enabled=true"
@@ -52,7 +52,7 @@ services:
     memswap_limit: ${MEM_LIMIT}
     cpus: ${CPU_LIMIT}
     ports:
-      - ${DATAIDREF_HTTP_PORT:-6085}:80
+      - ${DATAIDREF_HTTP_PORT}:80
     environment:
       VIRTUOSO_URL: ${DATAIDREF_VIRTUOSO_URL}
       SPARQL_PUBLIC_ENDPOINT: ${DATAIDREF_SPARQL_PUBLIC_ENDPOINT}
