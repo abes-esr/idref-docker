@@ -12,5 +12,5 @@ En local, il faut préciser la variable d'environnement à la JVM : -DENVIR="www
 | Data IdRef         | [data-dev.idref.fr](https://data-dev.idref.fr)                 | [data-test.idref.fr](https://data-test.idref.fr/)               | [data.idref.fr](https://data.idref.fr/)                                                                |
 
 Repository des sources :
-- [IdRef-API](https://github.com/Abesesr/idref-api)
-- [data-idref](https://github.com/Abesesr/data-idref)
+- [IdRef-API](https://github.com/abes-esr/idref-api)
+- [data-idref](https://github.com/abes-esr/data-idref)
