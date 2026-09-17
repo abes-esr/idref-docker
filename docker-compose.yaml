@@ -1,7 +1,7 @@
 
 services:
   idref-api-derivationBnf:
-    image: abesesr/idref:${IDREF_API_DERIVATION_VERSION}-derivation-bnf
+    image: abesesr/idref:${DERIVATION_BNF_VERSION}
     container_name: idref-api-derivationBnf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
@@ -23,7 +23,7 @@ services:
       - "wud.watch.digest=true"
 
   idref-api-derivationViaf:
-    image: abesesr/idref:${IDREF_API_DERIVATION_VERSION}-derivation-viaf
+    image: abesesr/idref:${DERIVATION_VIAF_VERSION}
     container_name: idref-api-derivationViaf
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
@@ -45,7 +45,7 @@ services:
       - "wud.watch.digest=true"
 
   data-idref:
-    image: abesesr/idref:${DATAIDREF_VERSION}-data-idref
+    image: abesesr/idref:${DATAIDREF_VERSION}
     container_name: data-idref
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
@@ -67,9 +67,8 @@ services:
       - "wud.watch=true"
       - "wud.watch.digest=true"
 
-
   data-idrefplus:
-    image: abesesr/idref:${DATAIDREFPLUS_VERSION}-data-idrefplus
+    image: abesesr/idref:${DATAIDREFPLUS_VERSION}
     container_name: data-idrefplus
     restart: unless-stopped
     mem_limit: ${MEM_LIMIT}
